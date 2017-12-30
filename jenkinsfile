@@ -1,22 +1,28 @@
-
 pipeline {
-    agent any 
+
+    agent any
+
+
 
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'make' 
-            }
-        }
-        stage('Test'){
+
+        stage ('Compile Stage') {
+
+ 
             steps {
-                sh 'make check'
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
             }
+        
+
+
+
+            
+
         }
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
-            }
-        }
-    }
-}
+
+   }
+   
+} 
