@@ -4,15 +4,18 @@ agent any
 tools{
 maven 'maven3'
 jdk 'jdk8'
+}
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
             }
+            }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+            }
             }
         }
         stage('Deploy') {
@@ -26,5 +29,4 @@ jdk 'jdk8'
             }
         }
     }
-}
     }
