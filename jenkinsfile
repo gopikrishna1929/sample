@@ -12,12 +12,7 @@ jdk 'jdk8'
             }
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-            }
-        }
+        
         stage('Deploy') {
             steps {
             
@@ -25,7 +20,7 @@ jdk 'jdk8'
          steps     {
  
       sh "mvn clean install"
- 
+ }
             }
         }
     }
