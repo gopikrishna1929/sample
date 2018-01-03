@@ -9,18 +9,12 @@ jdk 'jdk8'
         stage('Build') {
             steps {
                 echo 'Building..'
-            }
-            }
-        }
+           }
         
-        stage('Deploy') {
-            steps {
-            
-        echo 'Deploying....'
-         steps     {
+        
  
       sh "mvn clean install"
- }
+ 
             }
         }
     }
